@@ -1,12 +1,19 @@
-{% if user_list %}
-    <ul>
-	{% for user in user_list %}
-		<li><a href="/users/{{ user.id }}/names">{{ user.first_name }}</a></li>
-	{% endfor %}
-	</ul>
-{% else %}
-	<p>No polls are available.</p>
-{% endif %}
-<form action="" >
-	<input type="submit" value="blah"/>
-</form>
+<html>
+<head>
+	<link href="../../static/users/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	{% if user_list %}
+		<ul>
+		{% for user in user_list %}
+			<li><a href="/users/{{ user.id }}/names">{{ user.first_name }}</a></li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>No polls are available.</p>
+	{% endif %}
+	<form id="v-list" action="" >
+		<input type="submit" value="blah"/>
+	</form>
+</body>
+</html>

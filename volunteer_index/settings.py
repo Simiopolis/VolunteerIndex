@@ -1,3 +1,5 @@
+# from mongoengine import connect
+
 import os
 # Django settings for volunteer_index project.
 
@@ -155,3 +157,5 @@ LOGGING = {
         },
     }
 }
+
+# connect('volunteer')
