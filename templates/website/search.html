@@ -1,0 +1,29 @@
+{% if users %}
+{% if None in users %}
+<a>No Match</a>
+
+{% else %}
+
+<h1>Search Results</h1>
+	{% for user in users %} 
+		<li>
+			<a>{{ user.first_name }} {{ user.last_name }}</a>
+		</li>
+	{% endfor %}
+	<a href ="/search/">Back</a>
+{% endif %}
+{% else %}
+<h1>Search</h1>
+<h2>Please fill in the appropriate blanks.</h2>
+<form id="v-list" action="" method='post'>
+	{% csrf_token %}
+	First Name: <input type="text" name='f_name' value=""/>
+
+	Last Name: <input type="text" value=""/>
+
+	Keywords: <input type="text" value=""/>
+
+	<input type="submit" value="search"/>
+</form>
+<a href = "/">Back</a>
+{% endif %}

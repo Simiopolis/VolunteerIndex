@@ -14,4 +14,5 @@ urlpatterns = patterns('website.views',
 
     # Uncomment the next line to enable the admin:
 	url(r'^$', 'site_index'),
+	url(r'^search/$', 'search'),
 )

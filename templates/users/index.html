@@ -6,11 +6,11 @@
 	{% if user_list %}
 		<ul>
 		{% for user in user_list %}
-			<li><a href="/users/{{ user.id }}/names">{{ user.first_name }}</a></li>
+		<li><a href="/users/{{ user.id }}/names">{{ user.first_name }} {{ user.last_name }}</a></li>
 		{% endfor %}
 		</ul>
 	{% else %}
-		<p>No polls are available.</p>
+		<p>No volunteers in database.</p>
 	{% endif %}
 	<form id="v-list" action="" >
 		<input type="submit" value="blah"/>
