@@ -2,11 +2,12 @@ from django.shortcuts import render_to_response, redirect
 from users.models import User
 from django.http import HttpResponse, Http404
 from django.core.context_processors import csrf
+from django.template import RequestContext
 
 # Create your views here.
 
 def site_index(request):
-	return render_to_response('website/site_index.html', {})
+	return render_to_response('website/site_index.html', {}, context_instance=RequestContext(request))
 
 
 def search(request):
