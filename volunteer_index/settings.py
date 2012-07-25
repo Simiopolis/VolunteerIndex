@@ -167,5 +167,3 @@ LOGGING = {
         },
     }
 }
-
-# connect('volunteer')

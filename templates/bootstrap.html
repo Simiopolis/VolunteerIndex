@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/css/bootstrap.css/"/>
+		<link type="text/css" href="/static/css/website/site_index.css" rel="stylesheet"/>
+		 <style>
+			body {
+				padding-top: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">	
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>	
+				<a class="brand" href="/">Volunteer Index</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="/users/">Volunteers</a></li>
+						<li><a href="/search/">Search For A Volunteer</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+			{% block body %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

@@ -1,3 +1,6 @@
+{% extends "bootstrap.html" %}
+
+{% block body %}
 {% if users %}
 {% if None in users %}
 <a>No Match</a>
@@ -27,3 +30,4 @@
 </form>
 <a href = "/">Back</a>
 {% endif %}
+{% endblock %}
