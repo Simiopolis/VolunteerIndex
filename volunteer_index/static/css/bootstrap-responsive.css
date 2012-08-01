@@ -679,6 +679,16 @@
   }
 }
 
+
+/*Change this to stop the bootstrap from removing the entire navbar
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 @media (max-width: 979px) {
   body {
     padding-top: 0;
