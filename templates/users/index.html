@@ -7,18 +7,26 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Contact</th>
+					<th>Description</th>
 				<tr>
 			</thead>
 			<tbody>
 				{% for user in user_list %}
 				<tr>
 				<td>		
-						<a href="/users/{{ user.id }}/names">{{ user.first_name }} {{ user.last_name }}</a></ul>
+					<a href="/users/{{ user.id }}/names">{{ user.first_name }} {{ user.last_name }}</a>
+				</td>
+				<td>		
+					<a>{{ user.email_address }}</a>
+				</td>
+				<td>		
+					<a>{{ user.skill_description }}</a>
 				</td>
 				</tr>
 				{% endfor %}
-	</tbody>
-	</table>
+			</tbody>
+		</table>
 	{% else %}
 		<p>No volunteers in database.</p>
 	{% endif %}
